@@ -1,1 +1,6 @@
 .dvc/cache/
+/raw_data.csv
+/processed_data.csv
+/venv/
+.env
+/_pycache_/
