@@ -1,7 +1,7 @@
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
 
-def preprocess_data(input_file='/home/haseeb/mlops-project/raw_data.csv', output_file='/home/haseeb/mlops-project/processed_data.csv'):
+def preprocess_data(input_file='/data/raw_data.csv', output_file='/data/processed_data.csv'):
     # Read the raw data
     df = pd.read_csv(input_file)
     
@@ -19,4 +19,4 @@ def preprocess_data(input_file='/home/haseeb/mlops-project/raw_data.csv', output
 
 
 if __name__ == "__main__":
-    preprocess_data() 
+    preprocess_data()
