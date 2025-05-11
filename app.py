@@ -18,7 +18,7 @@ def fetch_weather():
         'Wind Speed': data['wind']['speed'],
         'Weather Condition': data['weather'][0]['description']
     }
-
+# test
 def save_to_csv(entry, filename = '/data/raw_data.csv'):
     file_exists = False
     try:

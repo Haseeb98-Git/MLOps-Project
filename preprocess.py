@@ -2,7 +2,7 @@ import pandas as pd
 from sklearn.preprocessing import StandardScaler
 
 def preprocess_data(input_file='/data/raw_data.csv', output_file='/data/processed_data.csv'):
-    # Read the raw data
+    # Read the raw dataa
     df = pd.read_csv(input_file)
     
     # Handle missing values
