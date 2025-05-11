@@ -1,0 +1,12 @@
+{"timestamp":"2025-05-11T14:46:16.908116","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-05-11T14:46:16.908628","level":"info","event":"Filling up the DagBag from /home/haseeb/mlops-project/airflow/dags/weather_pipeline.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-05-11T14:46:17.403208Z","level":"info","event":"Task instance is in running state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-11T14:46:17.403327Z","level":"info","event":" Previous state of the Task instance: queued","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-11T14:46:17.403370Z","level":"info","event":"Current task name:preprocess_data","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-11T14:46:17.403398Z","level":"info","event":"Dag name:weather_pipeline","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-11T14:46:17.403425Z","level":"info","event":"Processed data saved to /home/haseeb/mlops-project/processed_data.csv","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-11T14:46:17.403450Z","level":"info","event":"Task instance in success state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-11T14:46:17.403475Z","level":"info","event":" Previous state of the Task instance: running","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-11T14:46:17.403500Z","level":"info","event":"Task operator:<Task(PythonOperator): preprocess_data>","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-11T14:46:17.386457","level":"warning","event":"DataFrame.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.","category":"FutureWarning","filename":"/home/haseeb/mlops-project/preprocess.py","lineno":9,"logger":"py.warnings"}
+{"timestamp":"2025-05-11T14:46:17.391282","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator"}

@@ -19,7 +19,7 @@ def fetch_weather():
         'Weather Condition': data['weather'][0]['description']
     }
 
-def save_to_csv(entry, filename='raw_data.csv'):
+def save_to_csv(entry, filename='/home/haseeb/mlops-project/raw_data.csv'):
     file_exists = False
     try:
         with open(filename, 'r'):
@@ -32,6 +32,7 @@ def save_to_csv(entry, filename='raw_data.csv'):
         if not file_exists:
             writer.writeheader()
         writer.writerow(entry)
+
 
 if __name__ == "__main__":
     weather = fetch_weather()

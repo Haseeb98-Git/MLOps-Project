@@ -1,11 +1,11 @@
 from datetime import datetime, timedelta
 from airflow import DAG
-from airflow.operators.python import PythonOperator
+from airflow.providers.standard.operators.python import PythonOperator
 import sys
 import os
+import logging
 
-# Add the project root directory to Python path
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
 
 from app import fetch_weather, save_to_csv
 from preprocess import preprocess_data
@@ -16,18 +16,20 @@ default_args = {
     'email_on_failure': False,
     'email_on_retry': False,
     'retries': 1,
-    'retry_delay': timedelta(minutes=5),
+    'retry_delay': timedelta(seconds=5),
 }
 
 def collect_weather_data():
+    logging.info("Starting weather data collection")
     weather = fetch_weather()
     save_to_csv(weather)
+    logging.info("Weather data collected and saved successfully")
 
 with DAG(
     'weather_pipeline',
     default_args=default_args,
     description='Weather data collection and preprocessing pipeline',
-    schedule_interval=timedelta(hours=1),
+    schedule=timedelta(seconds=10),  # Run every 10 seconds
     start_date=datetime(2024, 1, 1),
     catchup=False,
     tags=['weather', 'dvc'],

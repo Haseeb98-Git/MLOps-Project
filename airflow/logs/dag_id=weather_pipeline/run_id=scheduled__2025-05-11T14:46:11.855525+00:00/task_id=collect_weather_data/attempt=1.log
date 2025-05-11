@@ -1,0 +1,12 @@
+{"timestamp":"2025-05-11T14:46:13.216203","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-05-11T14:46:13.216716","level":"info","event":"Filling up the DagBag from /home/haseeb/mlops-project/airflow/dags/weather_pipeline.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-05-11T14:46:13.750281Z","level":"info","event":"Task instance is in running state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-11T14:46:13.750373Z","level":"info","event":" Previous state of the Task instance: queued","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-11T14:46:13.750403Z","level":"info","event":"Current task name:collect_weather_data","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-11T14:46:13.750430Z","level":"info","event":"Dag name:weather_pipeline","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-11T14:46:13.729980","level":"info","event":"Starting weather data collection","logger":"root"}
+{"timestamp":"2025-05-11T14:46:14.703749","level":"info","event":"Weather data collected and saved successfully","logger":"root"}
+{"timestamp":"2025-05-11T14:46:14.704198","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator"}
+{"timestamp":"2025-05-11T14:46:14.722802Z","level":"info","event":"Task instance in success state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-11T14:46:14.722906Z","level":"info","event":" Previous state of the Task instance: running","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-11T14:46:14.722940Z","level":"info","event":"Task operator:<Task(PythonOperator): collect_weather_data>","chan":"stdout","logger":"task"}
