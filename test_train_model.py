@@ -19,7 +19,7 @@ def sample_data(tmp_path):
     input_csv = tmp_path / "test_data.csv"
     output_model = tmp_path / "test_model.pkl"
 
-    # Save to CSV
+    # Save to CSV -
     df.to_csv(input_csv, index=False)
 
     return input_csv, output_model
