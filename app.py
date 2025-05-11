@@ -19,7 +19,7 @@ def fetch_weather():
         'Weather Condition': data['weather'][0]['description']
     }
 # test
-def save_to_csv(entry, filename = '/data/raw_data.csv'):
+def save_to_csv(entry, filename = 'data/raw_data.csv'):
     file_exists = False
     try:
         with open(filename, 'r'):
