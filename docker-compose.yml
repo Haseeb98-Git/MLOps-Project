@@ -1,0 +1,28 @@
+version: "3.9"
+
+services:
+
+  airflow-api:
+    build: .
+    container_name: airflow-api
+    ports:
+      - "8085:8085"  # Expose the API server on port 8085
+    volumes:
+      - airflow-db:/app/airflow  # Share the Airflow DB
+    environment:
+      - AIRFLOW_HOME=/app/airflow
+    command: ["airflow", "api-server", "-p", "8085"]
+
+  airflow-scheduler:
+    build: .
+    container_name: airflow-scheduler
+    depends_on:
+      - airflow-api
+    volumes:
+      - airflow-db:/app/airflow  # Share the Airflow DB
+    environment:
+      - AIRFLOW_HOME=/app/airflow
+    command: ["airflow", "scheduler"]
+
+volumes:
+  airflow-db:

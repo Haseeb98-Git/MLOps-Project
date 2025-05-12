@@ -3,7 +3,7 @@ import pandas as pd
 import pytest
 from sklearn.linear_model import LinearRegression
 import pickle
-from train_model import train_model  # Replace `your_module` with the actual .py file name (without .py)
+from train_model import train_model 
 
 @pytest.fixture
 def sample_data(tmp_path):
