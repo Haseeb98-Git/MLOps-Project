@@ -6,8 +6,8 @@ import mlflow
 import mlflow.sklearn
 import argparse
 
-mlflow.set_tracking_uri("http://127.0.0.1:5000")
-
+#mlflow.set_tracking_uri("http://127.0.0.1:5000") # for the local system
+mlflow.set_tracking_uri("http://mlflow:5000") # for the container
 def train_model(input_file='data/processed_data.csv', output_file='data/model.pkl', test_size=0.2):
     # Read processed data
     df = pd.read_csv(input_file)

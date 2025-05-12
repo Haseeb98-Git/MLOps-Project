@@ -3,11 +3,14 @@ FROM python:3.11
 # Set working directory
 WORKDIR /app
 
-# Copy the entire project directory, excluding venv folder (using .dockerignore)
-COPY . /app
+# Copy only the requirements.txt first
+COPY requirements.txt /app/
 
 # Install dependencies from requirements.txt
 RUN pip install -r /app/requirements.txt
+
+# Now copy the entire project directory, excluding venv folder (using .dockerignore)
+COPY . /app
 
 # Remove the old airflow.cfg file if it exists (we'll recreate it)
 RUN rm -f /app/airflow/airflow.cfg

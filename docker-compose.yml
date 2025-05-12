@@ -34,11 +34,11 @@ services:
     ports:
       - "5000:5000"
     volumes:
-      - ./mlruns:/mlflow/mlruns
-      - ./mlflow.db:/mlflow/mlflow.db
+      - ./mlruns:/mlflow/mlruns       # Relative path for the mlruns directory
+      - ./mlflow.db:/app/mlflow.db    # Relative path for the mlflow.db file
     command: >
       mlflow server
-      --backend-store-uri sqlite:///mlflow/mlflow.db
+      --backend-store-uri sqlite:///app/mlflow.db
       --default-artifact-root /mlflow/mlruns
       --host 0.0.0.0
       --port 5000
