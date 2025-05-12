@@ -3,7 +3,7 @@ version: "3.9"
 services:
 
   airflow-api:
-    build: .
+    build: .  # Build the container from the Dockerfile in the current directory
     container_name: airflow-api
     ports:
       - "8085:8085"
@@ -13,9 +13,11 @@ services:
     environment:
       - AIRFLOW_HOME=/app/airflow
     command: ["airflow", "api-server", "-p", "8085"]
+    depends_on:
+      - mlflow
 
   airflow-scheduler:
-    build: .
+    build: .  # Build the container from the Dockerfile in the current directory
     container_name: airflow-scheduler
     depends_on:
       - airflow-api
@@ -25,6 +27,21 @@ services:
     environment:
       - AIRFLOW_HOME=/app/airflow
     command: ["airflow", "scheduler"]
+
+  mlflow:
+    build: .  # Build the MLflow container from the current directory
+    container_name: mlflow-server
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./mlruns:/mlflow/mlruns
+      - ./mlflow.db:/mlflow/mlflow.db
+    command: >
+      mlflow server
+      --backend-store-uri sqlite:///mlflow/mlflow.db
+      --default-artifact-root /mlflow/mlruns
+      --host 0.0.0.0
+      --port 5000
 
 volumes:
   airflow-db:

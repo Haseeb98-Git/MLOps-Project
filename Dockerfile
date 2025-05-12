@@ -18,5 +18,8 @@ ENV AIRFLOW_HOME=/app/airflow
 # Initialize Airflow database (migrate)
 RUN airflow db migrate
 
+# Install mlflow
+RUN pip install mlflow
+
 # Default command to run (overridden by Docker Compose)
 CMD ["/bin/bash"]
