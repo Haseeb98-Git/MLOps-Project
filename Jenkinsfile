@@ -36,6 +36,8 @@ pipeline {
 
                     // Login to Docker Hub using Jenkins credentials
                     withCredentials([usernamePassword(credentialsId: 'haseeb-dockerhub', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
+                        // Perform Docker login here using the credentials injected by Jenkins
+                        sh 'echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin'
 
                         // Push the tagged images to Docker Hub
                         sh 'docker push $DOCKER_USERNAME/$REPOSITORY_NAME:mlops-proj-mlflow-latest'
