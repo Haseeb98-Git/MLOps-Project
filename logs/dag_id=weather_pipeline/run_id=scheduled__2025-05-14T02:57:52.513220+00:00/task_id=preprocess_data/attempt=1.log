@@ -1,0 +1,12 @@
+{"timestamp":"2025-05-14T02:57:57.649121","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-05-14T02:57:57.649531","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/weather_pipeline.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-05-14T02:57:59.355220Z","level":"info","event":"Task instance is in running state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-14T02:57:59.355374Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-14T02:57:59.355415Z","level":"info","event":"Current task name:preprocess_data","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-14T02:57:59.355447Z","level":"info","event":"Dag name:weather_pipeline","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-14T02:57:59.355477Z","level":"info","event":"Processed data saved to data/processed_data.csv","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-14T02:57:59.355506Z","level":"info","event":"Task instance in success state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-14T02:57:59.355536Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-14T02:57:59.355573Z","level":"info","event":"Task operator:<Task(PythonOperator): preprocess_data>","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-14T02:57:59.340784","level":"warning","event":"/opt/airflow/preprocess.py:9: FutureWarning: DataFrame.fillna with 'method' is deprecated and will raise in a future version. Use obj.ffill() or obj.bfill() instead.\n  df = df.fillna(method='ffill')  # Forward fill for missing values\n","logger":"py.warnings"}
+{"timestamp":"2025-05-14T02:57:59.344931","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator"}

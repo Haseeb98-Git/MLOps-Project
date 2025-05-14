@@ -1,0 +1,33 @@
+{"timestamp":"2025-05-14T02:58:29.185591","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-05-14T02:58:29.186064","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/weather_pipeline.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-05-14T02:58:30.798787Z","level":"info","event":"Task instance is in running state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-14T02:58:30.800269Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-14T02:58:30.800895Z","level":"info","event":"Current task name:train_model","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-14T02:58:30.801678Z","level":"info","event":"Dag name:weather_pipeline","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-14T02:58:30.997871Z","level":"error","event":"2025/05/14 02:58:30 WARNING mlflow.utils.git_utils: Failed to import Git (the Git executable is probably not on your PATH), so Git SHA is not available. Error: Failed to initialize: Bad git executable.","chan":"stderr","logger":"task"}
+{"timestamp":"2025-05-14T02:58:30.998029Z","level":"error","event":"The git executable must be specified in one of the following ways:","chan":"stderr","logger":"task"}
+{"timestamp":"2025-05-14T02:58:30.998078Z","level":"error","event":"    - be included in your $PATH","chan":"stderr","logger":"task"}
+{"timestamp":"2025-05-14T02:58:30.998114Z","level":"error","event":"    - be set via $GIT_PYTHON_GIT_EXECUTABLE","chan":"stderr","logger":"task"}
+{"timestamp":"2025-05-14T02:58:30.998156Z","level":"error","event":"    - explicitly set via git.refresh(<full-path-to-git-executable>)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-05-14T02:58:30.998189Z","level":"error","event":"","chan":"stderr","logger":"task"}
+{"timestamp":"2025-05-14T02:58:30.998219Z","level":"error","event":"All git commands will error until this is rectified.","chan":"stderr","logger":"task"}
+{"timestamp":"2025-05-14T02:58:30.998257Z","level":"error","event":"","chan":"stderr","logger":"task"}
+{"timestamp":"2025-05-14T02:58:30.998287Z","level":"error","event":"This initial message can be silenced or aggravated in the future by setting the","chan":"stderr","logger":"task"}
+{"timestamp":"2025-05-14T02:58:30.998316Z","level":"error","event":"$GIT_PYTHON_REFRESH environment variable. Use one of the following values:","chan":"stderr","logger":"task"}
+{"timestamp":"2025-05-14T02:58:30.998346Z","level":"error","event":"    - quiet|q|silence|s|silent|none|n|0: for no message or exception","chan":"stderr","logger":"task"}
+{"timestamp":"2025-05-14T02:58:30.998391Z","level":"error","event":"    - warn|w|warning|log|l|1: for a warning message (logging level CRITICAL, displayed by default)","chan":"stderr","logger":"task"}
+{"timestamp":"2025-05-14T02:58:30.998438Z","level":"error","event":"    - error|e|exception|raise|r|2: for a raised exception","chan":"stderr","logger":"task"}
+{"timestamp":"2025-05-14T02:58:30.998487Z","level":"error","event":"","chan":"stderr","logger":"task"}
+{"timestamp":"2025-05-14T02:58:30.998600Z","level":"error","event":"Example:","chan":"stderr","logger":"task"}
+{"timestamp":"2025-05-14T02:58:30.998684Z","level":"error","event":"    export GIT_PYTHON_REFRESH=quiet","chan":"stderr","logger":"task"}
+{"timestamp":"2025-05-14T02:58:30.998737Z","level":"error","event":"","chan":"stderr","logger":"task"}
+{"timestamp":"2025-05-14T02:58:31.084083Z","level":"info","event":"Training R² score: 1.000","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-14T02:58:31.084231Z","level":"info","event":"Testing R² score: 1.000","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-14T02:58:31.084334Z","level":"info","event":"Model saved to data/model.pkl","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-14T02:58:34.709297Z","level":"error","event":"\u001b[31m2025/05/14 02:58:34 WARNING mlflow.models.model: Model logged without a signature and input example. Please set `input_example` parameter when logging the model to auto infer the model signature.\u001b[0m","chan":"stderr","logger":"task"}
+{"timestamp":"2025-05-14T02:58:34.765833Z","level":"info","event":"🏃 View run rogue-auk-935 at: http://mlflow:5000/#/experiments/0/runs/abed537e0f464c89815a27aea2df6647","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-14T02:58:34.765974Z","level":"info","event":"🧪 View experiment at: http://mlflow:5000/#/experiments/0","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-14T02:58:34.777885","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator"}
+{"timestamp":"2025-05-14T02:58:34.790836Z","level":"info","event":"Task instance in success state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-14T02:58:34.790951Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","chan":"stdout","logger":"task"}
+{"timestamp":"2025-05-14T02:58:34.790991Z","level":"info","event":"Task operator:<Task(PythonOperator): train_model>","chan":"stdout","logger":"task"}
