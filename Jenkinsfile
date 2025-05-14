@@ -14,7 +14,7 @@ pipeline {
     stages {
         stage('Set AIRFLOW_UID') {
             steps {
-                sh 'echo -e "AIRFLOW_UID=$(id -u)" > .env'
+                sh 'echo "AIRFLOW_UID=$(id -u)" > .env'
             }
         }
 
