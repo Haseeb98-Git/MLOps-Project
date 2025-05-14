@@ -1,6 +1,5 @@
 import os
 import pytest
-import requests
 from datetime import datetime
 from app import fetch_weather, save_to_csv
 import csv
