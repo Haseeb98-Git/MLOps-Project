@@ -1,6 +1,5 @@
 __pycache__/
 mlruns/
 venv/
-.env
 test_weather_data.csv
 .pytest_cache/
