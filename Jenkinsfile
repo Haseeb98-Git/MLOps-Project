@@ -13,7 +13,7 @@ pipeline {
     stages {
         stage('Set AIRFLOW_UID') {
             steps {
-                bat 'echo \nAIRFLOW_UID=1000 >> .env'
+                bat 'echo AIRFLOW_UID=1000 >> .env'
             }
         }
 
