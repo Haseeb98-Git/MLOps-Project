@@ -3,3 +3,4 @@ mlruns/
 venv/
 test_weather_data.csv
 .pytest_cache/
+!*.dvc
