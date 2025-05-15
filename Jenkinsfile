@@ -27,10 +27,9 @@ pipeline {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'docker-hub-credentials', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
                     bat """
-                    docker tag mlops-proj-mlflow:latest %DOCKERHUB_USERNAME%/%REPOSITORY_NAME%:mlops-proj-mlflow-latest
+                    docker tag mlops-project-mlflow:latest %DOCKERHUB_USERNAME%/%REPOSITORY_NAME%:mlops-proj-mlflow-latest
                     docker tag apache/airflow:3.0.1 %DOCKERHUB_USERNAME%/%REPOSITORY_NAME%:apache-airflow-3.0.1
                     docker tag postgres:13 %DOCKERHUB_USERNAME%/%REPOSITORY_NAME%:postgres-13
-                    docker tag debian:bookworm-slim %DOCKERHUB_USERNAME%/%REPOSITORY_NAME%:debian-bookworm-slim
                     docker tag redis:7.2-bookworm %DOCKERHUB_USERNAME%/%REPOSITORY_NAME%:redis-7.2-bookworm
 
                     echo %DOCKER_PASSWORD% | docker login -u %DOCKER_USERNAME% --password-stdin
@@ -38,7 +37,6 @@ pipeline {
                     docker push %DOCKER_USERNAME%/%REPOSITORY_NAME%:mlops-proj-mlflow-latest
                     docker push %DOCKER_USERNAME%/%REPOSITORY_NAME%:apache-airflow-3.0.1
                     docker push %DOCKER_USERNAME%/%REPOSITORY_NAME%:postgres-13
-                    docker push %DOCKER_USERNAME%/%REPOSITORY_NAME%:debian-bookworm-slim
                     docker push %DOCKER_USERNAME%/%REPOSITORY_NAME%:redis-7.2-bookworm
                     """
                 }
