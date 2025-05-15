@@ -7,7 +7,7 @@ pipeline {
     }
 
     triggers {
-        // Trigger job only on push to the 'production' branch in GitHub
+        // Triggers job only on push to the 'production' branch in GitHub
         githubPush()
     }
 
