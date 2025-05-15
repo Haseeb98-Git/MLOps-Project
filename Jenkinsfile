@@ -27,7 +27,7 @@ pipeline {
         stage('Tag and Push Docker Images') {
             steps {
                 script {
-                    // Tag the images with your Docker Hub username and repository name
+                    // Tag thee images with your Docker Hub username and repository name
                     sh 'docker tag mlops-proj-mlflow:latest $DOCKERHUB_USERNAME/$REPOSITORY_NAME:mlops-proj-mlflow-latest'
                     sh 'docker tag apache/airflow:3.0.1 $DOCKERHUB_USERNAME/$REPOSITORY_NAME:apache-airflow-3.0.1'
                     sh 'docker tag postgres:13 $DOCKERHUB_USERNAME/$REPOSITORY_NAME:postgres-13'
